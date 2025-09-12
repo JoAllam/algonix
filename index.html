@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algonix</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="./media/logo.png" type="image/x-icon">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <h1><a href="index.html">Algonix</a></h1>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contacts">Contact Us</a>
+                <a href="#apply">Apply</a>
+            </nav>
+            <i class="fa-solid fa-bars" id="menu"></i>
+        </div>
+        <div class="hero">
+            <h2>We <span id="typing"></span></h2>
+            <lottie-player class="bot" src="./media/bot.json" background="transparent" speed="1" loop autoplay></lottie-player>
+        </div>
+    </header>
+    <main>
+        <div id="about" data-aos="zoom-in-down">
+            <div>
+                <i class="fa-solid fa-power-off"></i>
+            </div>
+            <div>
+                <h3>Who we are</h3>
+                <p>Blogy is a non-profit organization that offers access to the most recent blogs and articles on different
+                    topics and news, featuring the latest updates in technology, education, science and life.</p>
+            </div>
+        </div>
+        <!-- <div id="blog-page" data-aos="fade">
+            <h2>Enjoy millions of blogs at your fingertips.</h2>
+            <div id="blogs">
+                <section>
+                    <div class="blog" data-aos="flip-right">
+                        <figure>
+                            <img src="https://picsum.photos/300/200">
+                        </figure>
+                        <div>
+                            <h3>Blog Name</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                        <a href="#"></a>
+                    </div>
+                    <div class="blog" data-aos="flip-right">
+                        <figure>
+                            <img src="https://picsum.photos/300/200">
+                        </figure>
+                        <div>
+                            <h3>Blog Name</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                        <a href="#"></a>
+                    </div>
+                    <div class="blog" data-aos="flip-right">
+                        <figure>
+                            <img src="https://picsum.photos/300/200">
+                        </figure>
+                        <div>
+                            <h3>Blog Name</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                        <a href="#"></a>
+                    </div>
+                    <div class="blog" data-aos="flip-right">
+                        <figure>
+                            <img src="https://picsum.photos/300/200">
+                        </figure>
+                        <div>
+                            <h3>Blog Name</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                        <a href="#"></a>
+                    </div>
+                </section>
+            </div> -->
+        </div>
+    </main>
+    <footer>
+        <p>© 2025 Algonix - All rights reserved</p>
+        <div id="contacts">
+            <a href="#"><i id="facebook" class="fa-brands fa-square-facebook"></i></a>
+            <a href="#"><i id="instagram" class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i id="twitter" class="fa-brands fa-square-x-twitter"></i></a>
+            <a href="#"><i id="threads" class="fa-brands fa-square-threads"></i></a>
+        </div>
+    </footer>
+</body>
+<script src="./js/app.js"></script>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://kit.fontawesome.com/10d782f22d.js" crossorigin="anonymous"></script>
+<script>
+  AOS.init();
+</script>
+<script>
+    let typed = new Typed('#typing', {
+      strings: ['Lead', 'Teach', 'Learn', 'Empower'],
+      typeSpeed: 70,
+      backSpeed: 50,
+      loop: true,
+      showCursor: false
+    });
+</script>
+</html>
