@@ -1,0 +1,66 @@
+body {
+    background-color: var(--black);
+}
+
+#img {
+    background-image: url("../media/formbg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    filter: blur(10px) brightness(70%);
+}
+
+form {
+    background-color: #00254691;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2rem;
+    width: 30%;
+    height: 80%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+input, select {
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: 5px;
+    width: 100%;
+    transition: all 200ms linear;
+}
+
+input:focus {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+input:focus:valid {
+    box-shadow: 0 0 5px 0.5px green;
+}
+
+input:focus:invalid {
+    box-shadow: 0 0 5px 0.5px red;
+}
+
+#submit {
+    width: 30%;
+    box-shadow: none;
+    transition: none;
+}
+
+legend {
+    font-family: "Poiret One", sans-serif;
+    font-size: 2rem;
+}

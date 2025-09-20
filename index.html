@@ -13,80 +13,58 @@
 </head>
 <body>
     <header>
-        <div class="nav">
-            <h1><a href="index.html">Algonix</a></h1>
-            <nav>
-                <a href="#">Home</a>
-                <a href="#about">About</a>
-                <a href="#services">Services</a>
-                <a href="#contacts">Contact Us</a>
-                <a href="#apply">Apply</a>
-            </nav>
-            <i class="fa-solid fa-bars" id="menu"></i>
-        </div>
-        <div class="hero">
-            <h2>We <span id="typing"></span></h2>
-            <lottie-player class="bot" src="./media/bot.json" background="transparent" speed="1" loop autoplay></lottie-player>
-        </div>
+        <h1><a href="index.html">Algonix</a></h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#apply">Apply</a>
+        </nav>
+        <i class="fa-solid fa-bars" id="menu"></i>
     </header>
     <main>
-        <div id="about" data-aos="zoom-in-down">
-            <div>
+        <section class="hero" data-aos-once="true" data-aos="fade">
+            <h2>We <span id="typing"></span></h2>
+            <lottie-player class="bot" src="./media/bot.json" background="transparent" speed="1" loop autoplay></lottie-player>
+        </section>
+        <section id="services">
+            <h3 data-aos-once="true" data-aos="fade-down">Our Services</h3>
+            <div id="services-container">
+                <div class="service" data-aos-once="true" data-aos="fade-down">
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <h4>Online Sessions</h4>
+                </div>
+                <div class="service" data-aos-once="true" data-aos="fade-down">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <h4>Courses</h4>
+                </div>
+                <div class="service" data-aos-once="true" data-aos="fade-down">
+                    <i class="fa-solid fa-people-group"></i>
+                    <h4>Bootcamps</h4>
+                </div>
+                <div class="service" data-aos-once="true" data-aos="fade-down">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <h4>Events</h4>
+                </div>
+            </div>
+        </section>
+        <section id="about">
+            <div data-aos-once="true" data-aos="fade-down">
                 <i class="fa-solid fa-power-off"></i>
-            </div>
-            <div>
                 <h3>Who we are</h3>
-                <p>Blogy is a non-profit organization that offers access to the most recent blogs and articles on different
-                    topics and news, featuring the latest updates in technology, education, science and life.</p>
+                <p>We are a dedicated team passionate about sharing knowledge in robotics, artificial intelligence, and programming. 
+                    Our goal is to make learning these fields clear, practical, and enjoyable for learners at any level. 
+                    By providing courses, bootcamps, and resources, we aim to spark curiosity, develop problem-solving skills, and 
+                    inspire creativity.</p>
             </div>
-        </div>
-        <!-- <div id="blog-page" data-aos="fade">
-            <h2>Enjoy millions of blogs at your fingertips.</h2>
-            <div id="blogs">
-                <section>
-                    <div class="blog" data-aos="flip-right">
-                        <figure>
-                            <img src="https://picsum.photos/300/200">
-                        </figure>
-                        <div>
-                            <h3>Blog Name</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        </div>
-                        <a href="#"></a>
-                    </div>
-                    <div class="blog" data-aos="flip-right">
-                        <figure>
-                            <img src="https://picsum.photos/300/200">
-                        </figure>
-                        <div>
-                            <h3>Blog Name</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        </div>
-                        <a href="#"></a>
-                    </div>
-                    <div class="blog" data-aos="flip-right">
-                        <figure>
-                            <img src="https://picsum.photos/300/200">
-                        </figure>
-                        <div>
-                            <h3>Blog Name</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        </div>
-                        <a href="#"></a>
-                    </div>
-                    <div class="blog" data-aos="flip-right">
-                        <figure>
-                            <img src="https://picsum.photos/300/200">
-                        </figure>
-                        <div>
-                            <h3>Blog Name</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        </div>
-                        <a href="#"></a>
-                    </div>
-                </section>
-            </div> -->
-        </div>
+        </section>
+        <section id="apply">
+            <h3>Want to join us?</h3>
+            <p>Become a member of Algonix and participate in a heartwarming environment where we flourish together
+                and benefit others. <br>Choose your suitable community and meet like-minded friends.
+            </p>
+            <a href="./apply.html">Apply</a>
+        </section>
     </main>
     <footer>
         <p>© 2025 Algonix - All rights reserved</p>

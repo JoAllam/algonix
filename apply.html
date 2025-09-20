@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="icon" href="./media/logo.png" type="image/x-icon">
+    <title>Apply</title>
+</head>
+<body>
+    <div id="img"></div>
+        <form action="https://formspree.io/f/xdklqjnp" method="POST">
+            <legend>Algonix Application</legend>
+            <input type="text" name="name" id="name" placeholder="Enter your name" autocomplete="off" required minlength="2" maxlength="30" pattern="[a-zA-Z ]+">
+            <input type="text" name="whatsapp-number" id="whatsapp-number" placeholder="Enter your WhatsApp number" autocomplete="off" required minlength="11" pattern="[0-9 ]+">
+            <input type="text" name="number" id="number" placeholder="Enter your phone number" autocomplete="off" required minlength="11" pattern="[0-9 ]+">
+            <input type="email" name="email" id="email" placeholder="Enter your email" autocomplete="off" required>
+            <select id="grade" name="grade" required>
+                <option value="" selected disabled hidden>Grade</option>
+                <option value="g10">G10</option>
+                <option value="g11">G11</option>
+                <option value="g12">G12</option>
+                <option value="college">College Student</option>
+            </select>
+            <select id="community" name="community" required>
+                <option value="" selected disabled hidden>Desired Committee</option>
+                <option value="graphic design">Graphic Design</option>
+                <option value="oc">OC (Organizing Committee)</option>
+                <option value="pr">PR (Public Relations)</option>
+                <option value="hr">HR (Human Resources)</option>
+                <option value="social media">Social Media</option>
+                <option value="marketing">Marketing</option>
+                <option value="web development">Web Development</option>
+                <option value="video editing">Video Editing</option>
+                <option value="content writing">Content Writing</option>
+            </select>
+            <input type="submit" id="submit">
+        </form>
+</body>
+</html>

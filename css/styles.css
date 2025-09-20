@@ -1,13 +1,39 @@
 @import url('./CSS Reset.css');
+@import url('./apply.css');
+
+@-webkit-keyframes hvr-ripple-out {
+    100% {
+        top: -12px;
+        right: -12px;
+        bottom: -12px;
+        left: -12px;
+        opacity: 0;
+    }
+}
+
+@keyframes hvr-ripple-out {
+    100% {
+        top: -12px;
+        right: -12px;
+        bottom: -12px;
+        left: -12px;
+        opacity: 0;
+    }
+}
+
+@font-face {
+    font-family: "Kingthings";
+    src: url("../media/kingthings_exeter/Kingthings Exeter.ttf") format("truetype");
+}
 
 :root {
-    --black: #080808;
-    --darkblue: #012547;
-    --lightblue: #308ac9;
+    --black: #090909;
+    --darkblue: #002546;
+    --lightblue: #308BCD;
     --white: AliceBlue;
-    color: var(--black);
+    color: var(--white);
     scroll-behavior: smooth;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Sansation', sans-serif;
 }
 
 /* * {
@@ -16,35 +42,31 @@
 
 header {
     display: flex;
-    flex-direction: column;
-}
-
-.nav {
-    display: flex;
     justify-content: space-around;
     align-items: center;
     position: fixed;
+    top: 0;
     z-index: 99;
     padding: 1rem;
     width: 100%;
     background-color: var(--black);
 }
 
-.nav h1 {
-    font-family: 'Sansation', sans-serif;
+header h1 {
+    font-family: 'Kingthings', sans-serif;
     font-weight: 100;
     font-size: 4rem;
     letter-spacing: 1rem;
     text-shadow: 0 0 15px var(--lightblue);
 }
 
-.nav h1 a{
+header h1 a {
     text-decoration: none;
     color: var(--lightblue);
 }
 
 nav {
-    width: 50%;
+    width: 40%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -52,13 +74,13 @@ nav {
 }
 
 nav a {
+    color: var(--white);
     text-decoration: none;
-    font-family:'Poiret One', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poiret One', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1.8rem;
     font-weight: 700;
     border-radius: 15px;
     padding: 10px;
-    color: var(--white);
     transition: all 300ms linear;
     display: inline-block;
     vertical-align: middle;
@@ -99,7 +121,6 @@ nav a:hover::before {
 }
 
 #menu {
-    color: var(--white);
     display: none;
     font-size: 4rem;
     cursor: pointer;
@@ -112,7 +133,6 @@ nav a:hover::before {
 
 footer {
     background-color: var(--black);
-    color: var(--white);
     font-size: 1.5rem;
     height: 100%;
     padding: 1rem;
@@ -122,16 +142,15 @@ footer {
 }
 
 footer a {
-    color: var(--white)
+    color: var(--white);
 }
 
 .hero {
     background-color: var(--darkblue);
-    color: var(--white);
     height: 30rem;
     font-size: 4rem;
     margin-top: 100px;
-    font-family:"Poiret One", sans-serif;
+    font-family: "Poiret One", sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -148,197 +167,152 @@ footer a {
     width: 30%;
 }
 
-.index {
-    display: flex;
-    flex-direction: column;
-    gap: 5rem;
-    align-items: center;
-    padding: 5rem 0;
-    background-color: var(--black);
-    color: var(--white)
-}
-
-.index section {
-    height: 15rem;
-    font-size: 1.3rem;
-    width: 90%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-family: "Merienda"
-}
-
-.info h3 {
-    font-size: 2.5rem;
-    font-family:'Poiret One', Geneva, Tahoma, sans-serif;
-    text-shadow: 3px 2px 2px var(--darkred);
-    transition: all 300ms linear;
-}
-
 lottie-player {
     width: 50%;
     height: 300px;
 }
 
-.hidden {
-    display: none !important;
+#about {
+    scroll-margin-top: 120px;
+    height: 25rem;
+    padding: 2rem 5rem;
+    background-color: var(--darkblue);
+    font-size: 1.2rem;
 }
 
-#blog-page {
-    text-align: center;
-    padding: 3rem 0;
-    background-color: var(--lightred);
-    width: 100%;
-    scroll-margin-top: 100px;
-}
-
-#blogs {
+#about div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 5rem 0;
-    gap: 5rem;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
 }
 
-#blogs section {
-    width: 90%;
+.fa-power-off {
+    font-size: 8rem;
+    transition: all 200ms linear;
+}
+
+.fa-power-off:hover {
+    color: var(--black);
+}
+
+h3 {
+    font-size: 3rem;
+    font-family: 'Sansation', sans-serif;
+    font-weight: 100;
+    letter-spacing: 3px;
+}
+
+#services {
+    scroll-margin-top: 100px;
+    height: 40rem;
+    padding: 2rem 5rem;
+    background-color: var(--black);
+    font-size: 1.2rem;
     display: flex;
     justify-content: space-around;
-    gap: 20px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
 }
 
-#blogs section .blog {
-    height: 20rem;
-    width: 15rem;
-    border-radius: 20px;
-    background-color: var(--white);
-    color: var(--black);
+#services-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.service {
+    font-size: 2rem;
+    padding: 2rem;
+    width: 40%;
+    min-width: 300px;
+    background-color: var(--darkblue);
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    overflow: hidden;
-    transition: all 200ms linear;
-}
-
-#blogs section .blog:hover {
-    background-color: var(--black);
-    color: var(--white);
-}
-
-.blog div {
-    padding: 5px;
-}
-
-.blog a {
-    overflow: hidden;
-    width: 100%;
-    height: 30px;
-    transition: all 200ms linear;
-    display: inline-block;
-    vertical-align: middle;
+    justify-content: space-around;
+    align-items: center;
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     position: relative;
-    text-decoration: none;
-    color: var(--white);
+    overflow: hidden;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
 }
 
-.blog a::before {
-    content: "Read";
+.service::before {
+    content: "";
     position: absolute;
     z-index: -1;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--darkred);
-    -webkit-transform: scaleX(0);
-    transform: scaleX(0);
-    -webkit-transform-origin: 0 50%;
-    transform-origin: 0 50%;
+    background: var(--lightblue);
+    border-radius: 100%;
+    -webkit-transform: scale(0);
+    transform: scale(0);
     -webkit-transition-property: all;
     transition-property: all;
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
 }
 
-.blog:hover a::before {
-    -webkit-transform: scaleX(1);
-    transform: scaleX(1);
+.service:hover {
+    color: var(--black);
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+    transition: all 300ms linear;
 }
 
-.blog a:hover::before {
-    color: black;
+.service:hover::before {
+    -webkit-transform: scale(2);
+    transform: scale(2);
 }
 
-figure {
-    width: 100%;
-    height: 40%;
-    overflow: hidden;
+.service i {
+    font-size: 5rem;
 }
 
-figure img{
-    width: 100%;
-    height: 100%;
-    transition: all 200ms linear;
+.service * {
+    transition: color 300ms linear;
 }
 
-
-.blog:hover figure img {
-    transform: scale(110%);
-    filter: blur(1px);
-}
-
-#more {
-    padding: 10px;
-    border-radius: 15px;
-    border: none;
-    background-color: var(--darkred);
-    color: var(--white);
-    transition: all 200ms linear;
-}
-
-#more:hover {
-    background-color: var(--black);
-    color: var(--lightred);
-    transform: scale(1.2);
-}
-
-#about {
+#apply {
     scroll-margin-top: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    text-align: center;
-    height: 32rem;
-    padding: 2rem 5rem;
     background-color: var(--black);
+    padding: 2rem 5rem;
+    text-align: center;
+}
+
+#apply a {
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--black);
+    font-size: 2rem;
+    padding: 10px 20px;
+    border-radius: 15px;
+    background-color: var(--lightblue);
+    transition: all 300ms linear;
+}
+
+#apply a:hover {
+    background-color: var(--darkblue);
     color: var(--white);
-    font-size: 1.2rem;
-}
-
-#about a {
-    color: var(--white);
-}
-
-.fa-power-off {
-    font-size: 8rem;
-    color: var(--lightred);
-}
-
-#about h3 {
-    font-size: 3rem;
-    font-family: 'Merienda';
 }
 
 .fa-brands {
     font-size: 4rem;
-    color: var(--lightred);
     transition: all 200ms linear;
 }
 
@@ -347,39 +321,38 @@ figure img{
 }
 
 #instagram:hover {
-    background-image: linear-gradient(
-    45deg,
-    hsl(62deg 98% 56%) 0%,
-    hsl(57deg 100% 50%) 3%,
-    hsl(53deg 100% 50%) 7%,
-    hsl(50deg 100% 50%) 10%,
-    hsl(47deg 100% 50%) 14%,
-    hsl(44deg 100% 50%) 19%,
-    hsl(40deg 100% 50%) 23%,
-    hsl(36deg 100% 52%) 27%,
-    hsl(30deg 100% 56%) 31%,
-    hsl(23deg 100% 58%) 35%,
-    hsl(16deg 100% 61%) 40%,
-    hsl(8deg 100% 63%) 44%,
-    hsl(358deg 100% 64%) 48%,
-    hsl(349deg 100% 59%) 53%,
-    hsl(339deg 100% 52%) 57%,
-    hsl(335deg 100% 50%) 62%,
-    hsl(332deg 100% 50%) 66%,
-    hsl(330deg 100% 50%) 70%,
-    hsl(326deg 100% 48%) 75%,
-    hsl(322deg 100% 45%) 79%,
-    hsl(317deg 100% 42%) 83%,
-    hsl(310deg 100% 39%) 88%,
-    hsl(302deg 100% 35%) 92%,
-    hsl(292deg 100% 35%) 96%,
-    hsl(282deg 100% 36%) 100%
-  );
+    background-image: linear-gradient(45deg,
+            hsl(62deg 98% 56%) 0%,
+            hsl(57deg 100% 50%) 3%,
+            hsl(53deg 100% 50%) 7%,
+            hsl(50deg 100% 50%) 10%,
+            hsl(47deg 100% 50%) 14%,
+            hsl(44deg 100% 50%) 19%,
+            hsl(40deg 100% 50%) 23%,
+            hsl(36deg 100% 52%) 27%,
+            hsl(30deg 100% 56%) 31%,
+            hsl(23deg 100% 58%) 35%,
+            hsl(16deg 100% 61%) 40%,
+            hsl(8deg 100% 63%) 44%,
+            hsl(358deg 100% 64%) 48%,
+            hsl(349deg 100% 59%) 53%,
+            hsl(339deg 100% 52%) 57%,
+            hsl(335deg 100% 50%) 62%,
+            hsl(332deg 100% 50%) 66%,
+            hsl(330deg 100% 50%) 70%,
+            hsl(326deg 100% 48%) 75%,
+            hsl(322deg 100% 45%) 79%,
+            hsl(317deg 100% 42%) 83%,
+            hsl(310deg 100% 39%) 88%,
+            hsl(302deg 100% 35%) 92%,
+            hsl(292deg 100% 35%) 96%,
+            hsl(282deg 100% 36%) 100%);
     background-clip: text;
     color: transparent;
 }
 
-#twitter:hover, #threads:hover {
+#twitter:hover,
+#threads:hover {
     color: darkgray;
 }
 
@@ -421,13 +394,9 @@ figure img{
         height: 15rem;
         top: 102px;
         right: 0;
-        background-color: var(--darkred);
+        background-color: var(--darkblue);
         opacity: 0;
         transform: translatex(110px);
-    }
-
-    nav a {
-        color: var(--black);
     }
 
     #menu {
@@ -455,6 +424,7 @@ figure img{
     lottie-player {
         width: 100%;
     }
+
     footer {
         font-size: 1.2rem;
     }
@@ -473,13 +443,9 @@ figure img{
         height: 15rem;
         top: 70px;
         right: 0;
-        background-color: var(--darkred);
+        background-color: var(--darkblue);
         opacity: 0;
         transform: translatex(110px);
-    }
-
-    nav a {
-        color: var(--black);
     }
 
     #menu {
