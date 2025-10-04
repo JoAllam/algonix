@@ -173,6 +173,9 @@ footer a {
     padding: 5rem;
     background-color: var(--darkblue);
     font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #about div {
