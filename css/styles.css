@@ -66,7 +66,7 @@ header h1 a {
 }
 
 nav {
-    width: 40%;
+    width: 45%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -149,6 +149,7 @@ footer a {
     background-color: var(--darkblue);
     height: 30rem;
     font-size: 4rem;
+    padding: 10px 50px;
     margin-top: 100px;
     font-family: "Poiret One", sans-serif;
     display: flex;
@@ -158,7 +159,6 @@ footer a {
 
 #typing {
     color: var(--lightblue);
-    /* border-bottom: 10px solid var(--darkblue); */
     display: inline-block;
     width: 25rem;
 }
@@ -167,15 +167,10 @@ footer a {
     width: 30%;
 }
 
-lottie-player {
-    width: 50%;
-    height: 300px;
-}
-
 #about {
     scroll-margin-top: 120px;
-    height: 25rem;
-    padding: 2rem 5rem;
+    height: 30rem;
+    padding: 5rem;
     background-color: var(--darkblue);
     font-size: 1.2rem;
 }
@@ -215,6 +210,7 @@ h3 {
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
 }
 
 #services-container {
@@ -356,73 +352,65 @@ h3 {
     color: darkgray;
 }
 
-@media (max-width: 768px) and (min-width: 561px) {
+@media (max-width: 900px) and (min-width: 756px) {
     :root {
-        font-size: 90%;
+        font-size: 80%;
     }
 
     nav {
         width: 40%;
     }
 
-    .hero {
-        font-size: 2.5rem;
-        flex-direction: column;
-    }
-
     #typing {
-        width: 20rem;
+        width: 25rem;
     }
 
-    lottie-player {
-        width: 80%;
+    .bot {
+        width: 35%;
+    }
+
+    .fa-power-off {
+        font-size: 6rem;
     }
 }
 
-@media (max-width: 560px) and (min-width: 426px) {
+@media (max-width: 755px) and (min-width: 661px) {
     :root {
         font-size: 80%;
     }
 
     nav {
-        width: 25%;
-        position: absolute;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: stretch;
-        text-align: center;
-        height: 15rem;
-        top: 102px;
-        right: 0;
-        background-color: var(--darkblue);
-        opacity: 0;
-        transform: translatex(110px);
+        width: 50%;
     }
-
-    #menu {
-        display: block;
-        position: absolute;
-        top: 25%;
-        right: 6%;
-    }
-
+    
     .hero {
-        font-size: 2rem;
+        margin-top: 90px;
         flex-direction: column;
     }
 
     #typing {
-        width: 15rem;
+        width: 23rem;
     }
 
-    .index section {
-        text-align: center;
-        flex-direction: column;
-        height: auto;
+    .bot {
+        width: 50%;
     }
 
-    lottie-player {
-        width: 100%;
+    .service i {
+        font-size: 4rem;
+    }
+
+    .service {
+        width: 45%;
+        min-width: 150px;
+    }
+
+    .fa-power-off {
+        font-size: 6rem;
+    }
+
+    .fa-brands {
+        font-size: 3.5rem;
     }
 
     footer {
@@ -430,7 +418,7 @@ h3 {
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 660px) and (min-width: 421px) {
     :root {
         font-size: 70%;
     }
@@ -440,8 +428,9 @@ h3 {
         position: absolute;
         flex-direction: column;
         justify-content: space-around;
-        height: 15rem;
-        top: 70px;
+        align-items: stretch;
+        text-align: center;
+        top: 90px;
         right: 0;
         background-color: var(--darkblue);
         opacity: 0;
@@ -456,48 +445,128 @@ h3 {
     }
 
     .hero {
-        font-size: 1.8rem;
         margin-top: 90px;
         flex-direction: column;
+        font-size: 3rem;
+        height: 35rem;
     }
 
-    #typing {
-        width: 14rem;
+    .bot {
+        width: 60%;
     }
 
-    .index section {
-        text-align: center;
-        flex-direction: column;
-        height: auto;
+    .service i {
+        font-size: 4rem;
     }
 
-    lottie-player {
-        width: 70%;
-    }
-
-    #about {
-        scroll-margin-top: 0;
-        padding: 1rem 2.5rem;
-        height: 30rem;
-    }
-
-    #blog-page {
+    #services {
+        height: 60rem;
         scroll-margin-top: 90px;
     }
 
-    .fa-book-open {
-        font-size: 6rem;
+    .service {
+        width: 50%;
     }
 
-    #about h3 {
-        font-size: 2.5rem;
+    #typing {
+        width: 20rem;
+    }
+
+    #about {
+        padding: 2rem;
+        scroll-margin-top: 90px;
     }
 
     .fa-brands {
         font-size: 3rem;
     }
 
+    .fa-power-off {
+        font-size: 6rem;
+    }
+
     footer {
         font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 420px) {
+    :root {
+        font-size: 65%;
+    }
+
+    nav {
+        width: 25%;
+        position: absolute;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: stretch;
+        text-align: center;
+        top: 90px;
+        right: 0;
+        background-color: var(--darkblue);
+        opacity: 0;
+        transform: translatex(110px);
+    }
+
+    #menu {
+        display: block;
+        position: absolute;
+        top: 25%;
+        right: 2%;
+    }
+
+    .hero {
+        margin-top: 90px;
+        flex-direction: column;
+        font-size: 3rem;
+        height: 35rem;
+        text-align: center;
+    }
+
+    .bot {
+        width: 80%;
+    }
+
+    .service i {
+        font-size: 4rem;
+    }
+
+    #services {
+        scroll-margin-top: 80px;
+        height: 60rem;
+    }
+
+    .service {
+        width: 50%;
+    }
+
+    #typing {
+        width: 20rem;
+    }
+
+    #about {
+        padding: 1rem;
+        scroll-margin-top: 90px;
+    }
+
+    .fa-power-off {
+        font-size: 6rem;
+    }
+
+    #apply {
+        padding: 2rem 1rem;
+    }
+
+    #apply h3 {
+        width: 100%;
+        margin-bottom: 20px;
+        font-size: 2.5rem;
+    }
+
+    footer {
+        font-size: 1.2rem;
+        flex-direction: column;
+        gap: 20px;
     }
 }
